@@ -1,0 +1,25 @@
+[tool.black]
+line-length = 79
+target-version = ["py312"]
+extend-exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | build
+  | dist
+  | \.pytest_cache
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 79
+known_first_party = ["tests"]
+skip_glob = [".venv/*", "venv/*"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-ra"
+xfail_strict = true

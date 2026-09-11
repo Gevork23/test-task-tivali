@@ -1,0 +1,13 @@
+[flake8]
+max-line-length = 79
+# E203 и W503 конфликтуют с black — официальная рекомендация его авторов.
+extend-ignore = E203, W503
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    build,
+    dist,
+    .pytest_cache,
+    *.egg-info
